@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Join us for Anderson's 6th Birthday Party - A How to Train Your Dragon Adventure! March 5, 2026">
+    <title>Anderson's Dragon Adventure - 6th Birthday Party</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pirata+One&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#home" class="nav-logo">
+                <svg class="dragon-icon" viewBox="0 0 100 100" width="40" height="40">
+                    <path d="M50 10 L70 30 L90 25 L75 45 L85 70 L60 55 L50 80 L40 55 L15 70 L25 45 L10 25 L30 30 Z" fill="currentColor"/>
+                </svg>
+                <span>Anderson's Party</span>
+            </a>
+
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                <span class="hamburger"></span>
+            </button>
+
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#details" class="nav-link">Details</a></li>
+                <li><a href="#schedule" class="nav-link">Schedule</a></li>
+                <li><a href="#games" class="nav-link">Games</a></li>
+                <li><a href="#food" class="nav-link">Food</a></li>
+                <li><a href="#rsvp" class="nav-link nav-cta">RSVP</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <div class="dragon-silhouette"></div>
+            <h1 class="hero-title">Anderson's Epic Dragon Adventure!</h1>
+            <p class="hero-subtitle">Turning 6 on March 5, 2026</p>
+
+            <!-- Countdown Timer -->
+            <div class="countdown" id="countdown">
+                <div class="countdown-item">
+                    <span class="countdown-number" id="days">00</span>
+                    <span class="countdown-label">Days</span>
+                </div>
+                <div class="countdown-item">
+                    <span class="countdown-number" id="hours">00</span>
+                    <span class="countdown-label">Hours</span>
+                </div>
+                <div class="countdown-item">
+                    <span class="countdown-number" id="minutes">00</span>
+                    <span class="countdown-label">Minutes</span>
+                </div>
+                <div class="countdown-item">
+                    <span class="countdown-number" id="seconds">00</span>
+                    <span class="countdown-label">Seconds</span>
+                </div>
+            </div>
+
+            <div class="hero-buttons">
+                <a href="#rsvp" class="btn btn-primary">RSVP Now</a>
+                <a href="#details" class="btn btn-secondary">Learn More</a>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <span>Scroll to explore</span>
+            <div class="scroll-arrow"></div>
+        </div>
+    </section>
+
+    <!-- Party Details Section -->
+    <section class="section details" id="details">
+        <div class="container">
+            <h2 class="section-title">Party Details</h2>
+            <div class="scroll-decoration"></div>
+
+            <div class="details-grid">
+                <div class="detail-card fade-in">
+                    <div class="detail-icon">
+                        <svg viewBox="0 0 24 24" width="48" height="48">
+                            <path fill="currentColor" d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V9h14v11z"/>
+                        </svg>
+                    </div>
+                    <h3>Date</h3>
+                    <p>March 5, 2026</p>
+                    <p class="detail-sub">Thursday</p>
+                </div>
+
+                <div class="detail-card fade-in">
+                    <div class="detail-icon">
+                        <svg viewBox="0 0 24 24" width="48" height="48">
+                            <path fill="currentColor" d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/>
+                        </svg>
+                    </div>
+                    <h3>Time</h3>
+                    <p>2:00 PM - 5:00 PM</p>
+                    <p class="detail-sub">Pacific Time</p>
+                </div>
+
+                <div class="detail-card fade-in">
+                    <div class="detail-icon">
+                        <svg viewBox="0 0 24 24" width="48" height="48">
+                            <path fill="currentColor" d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                        </svg>
+                    </div>
+                    <h3>Location</h3>
+                    <p>7301 Sitio Salvia</p>
+                    <p class="detail-sub">Carlsbad, CA 92009</p>
+                </div>
+            </div>
+
+            <!-- Google Maps Embed -->
+            <div class="map-container fade-in">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3344.8!2d-117.28!3d33.12!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2s7301+Sitio+Salvia%2C+Carlsbad%2C+CA+92009!5e0!3m2!1sen!2sus!4v1234567890"
+                    width="100%"
+                    height="300"
+                    style="border:0;"
+                    allowfullscreen=""
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"
+                    title="Party Location Map">
+                </iframe>
+            </div>
+
+            <div class="details-info fade-in">
+                <div class="info-item">
+                    <h4>Theme</h4>
+                    <p>How to Train Your Dragon - Join us for dragon training, games, and Viking fun!</p>
+                </div>
+                <div class="info-item">
+                    <h4>Dress Code</h4>
+                    <p>Comfy clothes for outdoor games. Viking costumes welcome!</p>
+                </div>
+                <div class="info-item">
+                    <h4>Gifts</h4>
+                    <p>No gifts necessary - your presence is the best present!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Schedule Section -->
+    <section class="section schedule" id="schedule">
+        <div class="container">
+            <h2 class="section-title">Dragon Training Schedule</h2>
+            <div class="scroll-decoration"></div>
+
+            <div class="timeline">
+                <div class="timeline-item fade-in">
+                    <div class="timeline-marker">
+                        <svg viewBox="0 0 24 24" width="24" height="24">
+                            <path fill="currentColor" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                        </svg>
+                    </div>
+                    <div class="timeline-content">
+                        <span class="timeline-time">2:00 PM</span>
+                        <h3>Arrival & Shield Decorating</h3>
+                        <p>Welcome to Berk! Decorate your own Viking shield to prepare for battle.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item fade-in">
+                    <div class="timeline-marker">
+                        <svg viewBox="0 0 24 24" width="24" height="24">
+                            <path fill="currentColor" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                        </svg>
+                    </div>
+                    <div class="timeline-content">
+                        <span class="timeline-time">2:30 PM</span>
+                        <h3>Dragon Training Games</h3>
+                        <p>Test your skills in epic dragon training challenges!</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item fade-in">
+                    <div class="timeline-marker">
+                        <svg viewBox="0 0 24 24" width="24" height="24">
+                            <path fill="currentColor" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                        </svg>
+                    </div>
+                    <div class="timeline-content">
+                        <span class="timeline-time">3:30 PM</span>
+                        <h3>Snack Break & Wrestlemania Battle</h3>
+                        <p>Refuel with snacks and show your strength in the Dragon Rider Rumble!</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item fade-in">
+                    <div class="timeline-marker">
+                        <svg viewBox="0 0 24 24" width="24" height="24">
+                            <path fill="currentColor" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                        </svg>
+                    </div>
+                    <div class="timeline-content">
+                        <span class="timeline-time">4:00 PM</span>
+                        <h3>Cupcakes & Singing</h3>
+                        <p>Celebrate Anderson with cupcakes and the birthday song!</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item fade-in">
+                    <div class="timeline-marker">
+                        <svg viewBox="0 0 24 24" width="24" height="24">
+                            <path fill="currentColor" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                        </svg>
+                    </div>
+                    <div class="timeline-content">
+                        <span class="timeline-time">4:30 PM</span>
+                        <h3>Free Play</h3>
+                        <p>Explore, play, and have fun with your dragon rider friends!</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item fade-in">
+                    <div class="timeline-marker">
+                        <svg viewBox="0 0 24 24" width="24" height="24">
+                            <path fill="currentColor" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                        </svg>
+                    </div>
+                    <div class="timeline-content">
+                        <span class="timeline-time">5:00 PM</span>
+                        <h3>Wrap Up</h3>
+                        <p>Farewell, brave Vikings! Safe travels back from Berk.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Games Section -->
+    <section class="section games" id="games">
+        <div class="container">
+            <h2 class="section-title">Dragon Training Activities</h2>
+            <div class="scroll-decoration"></div>
+
+            <div class="games-grid">
+                <div class="game-card fade-in">
+                    <div class="game-icon">
+                        <svg viewBox="0 0 24 24" width="48" height="48">
+                            <circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="2"/>
+                            <circle cx="12" cy="12" r="6" fill="none" stroke="currentColor" stroke-width="2"/>
+                            <circle cx="12" cy="12" r="2" fill="currentColor"/>
+                        </svg>
+                    </div>
+                    <h3>Fireball Launch</h3>
+                    <p class="game-aka">Football Toss</p>
+                    <p>Launch fireballs at targets like a real Night Fury! Test your aim and power.</p>
+                </div>
+
+                <div class="game-card fade-in">
+                    <div class="game-icon">
+                        <svg viewBox="0 0 24 24" width="48" height="48">
+                            <path fill="currentColor" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/>
+                            <path fill="currentColor" d="M9 12l2 2 4-4"/>
+                        </svg>
+                    </div>
+                    <h3>Dragon Flight Course</h3>
+                    <p class="game-aka">Soccer Relay</p>
+                    <p>Navigate through the obstacle course as fast as a Deadly Nadder!</p>
+                </div>
+
+                <div class="game-card fade-in">
+                    <div class="game-icon">
+                        <svg viewBox="0 0 24 24" width="48" height="48">
+                            <path fill="currentColor" d="M3.5 18.5l6-6 4 4L22 6.92 20.59 5.5l-7.09 8.58-4-4L2 18.5h1.5z"/>
+                        </svg>
+                    </div>
+                    <h3>Viking Batting</h3>
+                    <p class="game-aka">Baseball</p>
+                    <p>Swing your battle axe... er, bat like a true Viking warrior!</p>
+                </div>
+
+                <div class="game-card fade-in">
+                    <div class="game-icon">
+                        <svg viewBox="0 0 24 24" width="48" height="48">
+                            <path fill="currentColor" d="M12 5.9c1.16 0 2.1.94 2.1 2.1s-.94 2.1-2.1 2.1S9.9 9.16 9.9 8s.94-2.1 2.1-2.1m0 9c2.97 0 6.1 1.46 6.1 2.1v1.1H5.9V17c0-.64 3.13-2.1 6.1-2.1M12 4C9.79 4 8 5.79 8 8s1.79 4 4 4 4-1.79 4-4-1.79-4-4-4zm0 9c-2.67 0-8 1.34-8 4v3h16v-3c0-2.66-5.33-4-8-4z"/>
+                        </svg>
+                    </div>
+                    <h3>Dragon Warrior Training</h3>
+                    <p class="game-aka">Karate</p>
+                    <p>Learn the ancient art of dragon defense! Hi-ya!</p>
+                </div>
+
+                <div class="game-card fade-in">
+                    <div class="game-icon">
+                        <svg viewBox="0 0 24 24" width="48" height="48">
+                            <path fill="currentColor" d="M20.57 14.86L22 13.43 20.57 12 17 15.57 8.43 7 12 3.43 10.57 2 9.14 3.43 7.71 2 5.57 4.14 4.14 2.71 2.71 4.14l1.43 1.43L2 7.71l1.43 1.43L2 10.57 3.43 12 7 8.43 15.57 17 12 20.57 13.43 22l1.43-1.43L16.29 22l2.14-2.14 1.43 1.43 1.43-1.43-1.43-1.43L22 16.29z"/>
+                        </svg>
+                    </div>
+                    <h3>Dragon Rider Rumble</h3>
+                    <p class="game-aka">Wrestlemania</p>
+                    <p>The ultimate showdown! Prove you're the mightiest dragon rider in Berk!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Food Section -->
+    <section class="section food" id="food">
+        <div class="container">
+            <h2 class="section-title">Viking Feast</h2>
+            <div class="scroll-decoration"></div>
+
+            <div class="food-content">
+                <div class="food-highlight fade-in">
+                    <div class="cupcake-tower">
+                        <svg viewBox="0 0 100 120" width="150" height="180">
+                            <!-- Cupcake base -->
+                            <path d="M25 70 L35 100 L65 100 L75 70 Z" fill="#8B4513"/>
+                            <path d="M30 70 L38 95 L62 95 L70 70 Z" fill="#A0522D"/>
+                            <!-- Frosting -->
+                            <ellipse cx="50" cy="70" rx="30" ry="15" fill="#FFB6C1"/>
+                            <ellipse cx="50" cy="60" rx="25" ry="12" fill="#FFC0CB"/>
+                            <ellipse cx="50" cy="52" rx="18" ry="10" fill="#FFD1DC"/>
+                            <!-- Candle -->
+                            <rect x="47" y="30" width="6" height="22" fill="#FFD700"/>
+                            <ellipse cx="50" cy="28" rx="5" ry="8" fill="#FF6B35"/>
+                            <ellipse cx="50" cy="25" rx="3" ry="5" fill="#FFD700"/>
+                        </svg>
+                    </div>
+                    <div class="food-highlight-text">
+                        <h3>Anderson's Special Cupcake</h3>
+                        <p>A magnificent red velvet cupcake topped with a Toothless & Hiccup decoration, fit for our birthday dragon rider!</p>
+                    </div>
+                </div>
+
+                <div class="food-menu fade-in">
+                    <h3>Cupcake Selection</h3>
+                    <ul class="menu-list">
+                        <li>
+                            <span class="menu-item">Plain Vanilla</span>
+                            <span class="menu-desc">Classic vanilla with buttercream frosting</span>
+                        </li>
+                        <li>
+                            <span class="menu-item">Red Velvet</span>
+                            <span class="menu-desc">Rich red velvet with cream cheese frosting</span>
+                        </li>
+                        <li>
+                            <span class="menu-item">Chocolate</span>
+                            <span class="menu-desc">Decadent chocolate with chocolate ganache</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="food-snacks fade-in">
+                    <h3>Dragon Snacks</h3>
+                    <ul class="menu-list">
+                        <li>
+                            <span class="menu-item">Fruit Skewers</span>
+                            <span class="menu-desc">Fresh fruit on Viking swords (skewers)</span>
+                        </li>
+                        <li>
+                            <span class="menu-item">Refreshments</span>
+                            <span class="menu-desc">Juice boxes and water for thirsty Vikings</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- RSVP Section -->
+    <section class="section rsvp" id="rsvp">
+        <div class="container">
+            <h2 class="section-title">Join the Adventure!</h2>
+            <div class="scroll-decoration"></div>
+
+            <div class="rsvp-content">
+                <div class="rsvp-info fade-in">
+                    <p class="rsvp-deadline">Please RSVP by <strong>February 20, 2026</strong></p>
+                    <p class="rsvp-alt">Or call/text: <a href="tel:310-301-8700">310-301-8700</a></p>
+                </div>
+
+                <form class="rsvp-form fade-in" id="rsvpForm" action="https://formspree.io/f/mbdkkozb" method="POST">
+                    <div class="form-group">
+                        <label for="guestName">Guest Name(s) *</label>
+                        <input type="text" id="guestName" name="guestName" required placeholder="Enter guest name(s)">
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="adults">Number of Adults</label>
+                            <select id="adults" name="adults">
+                                <option value="0">0</option>
+                                <option value="1" selected>1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="kids">Number of Kids</label>
+                            <select id="kids" name="kids">
+                                <option value="0">0</option>
+                                <option value="1" selected>1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="contact">Email or Phone *</label>
+                        <input type="text" id="contact" name="contact" required placeholder="your@email.com or phone number">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="notes">Special Notes (allergies, dietary needs, etc.)</label>
+                        <textarea id="notes" name="notes" rows="3" placeholder="Any allergies or special requirements?"></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary btn-submit">Send RSVP</button>
+                </form>
+
+                <div class="rsvp-success" id="rsvpSuccess">
+                    <div class="success-icon">
+                        <svg viewBox="0 0 24 24" width="64" height="64">
+                            <path fill="currentColor" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                        </svg>
+                    </div>
+                    <h3>Thanks for RSVPing!</h3>
+                    <p>See you in Berk, brave Viking!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="section gallery" id="gallery">
+        <div class="container">
+            <h2 class="section-title">Dragon Riders Gallery</h2>
+            <div class="scroll-decoration"></div>
+
+            <p class="gallery-intro fade-in">Photos from past adventures and the big day will appear here!</p>
+
+            <div class="gallery-grid fade-in">
+                <div class="gallery-item placeholder">
+                    <div class="placeholder-content">
+                        <svg viewBox="0 0 24 24" width="48" height="48">
+                            <path fill="currentColor" d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z"/>
+                        </svg>
+                        <span>Photo coming soon</span>
+                    </div>
+                </div>
+                <div class="gallery-item placeholder">
+                    <div class="placeholder-content">
+                        <svg viewBox="0 0 24 24" width="48" height="48">
+                            <path fill="currentColor" d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z"/>
+                        </svg>
+                        <span>Photo coming soon</span>
+                    </div>
+                </div>
+                <div class="gallery-item placeholder">
+                    <div class="placeholder-content">
+                        <svg viewBox="0 0 24 24" width="48" height="48">
+                            <path fill="currentColor" d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z"/>
+                        </svg>
+                        <span>Photo coming soon</span>
+                    </div>
+                </div>
+                <div class="gallery-item placeholder">
+                    <div class="placeholder-content">
+                        <svg viewBox="0 0 24 24" width="48" height="48">
+                            <path fill="currentColor" d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z"/>
+                        </svg>
+                        <span>Photo coming soon</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h3>Anderson's 6th Birthday</h3>
+                    <p>March 5, 2026 | 2:00 PM - 5:00 PM</p>
+                    <p>7301 Sitio Salvia, Carlsbad, CA 92009</p>
+                </div>
+
+                <div class="footer-contact">
+                    <h4>Questions?</h4>
+                    <p>Call or text: <a href="tel:310-301-8700">310-301-8700</a></p>
+                </div>
+
+                <div class="footer-share">
+                    <h4>Share this invite</h4>
+                    <button class="btn-share" id="shareBtn" onclick="copyLink()">
+                        <svg viewBox="0 0 24 24" width="20" height="20">
+                            <path fill="currentColor" d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81 1.66 0 3-1.34 3-3s-1.34-3-3-3-3 1.34-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9c-1.66 0-3 1.34-3 3s1.34 3 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.16c-.05.21-.08.43-.08.65 0 1.61 1.31 2.92 2.92 2.92s2.92-1.31 2.92-2.92-1.31-2.92-2.92-2.92z"/>
+                        </svg>
+                        Copy Link
+                    </button>
+                    <span class="copy-feedback" id="copyFeedback">Link copied!</span>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>Made with love for Anderson's special day</p>
+                <div class="dragon-footer">
+                    <svg viewBox="0 0 100 50" width="100" height="50">
+                        <path d="M10 40 Q25 20 40 35 Q50 25 60 35 Q75 20 90 40" stroke="currentColor" stroke-width="3" fill="none"/>
+                        <circle cx="50" cy="30" r="8" fill="currentColor"/>
+                        <circle cx="46" cy="28" r="2" fill="#1a1a1a"/>
+                        <circle cx="54" cy="28" r="2" fill="#1a1a1a"/>
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+</body>
+</html>
