@@ -121,8 +121,11 @@ img {
     color: var(--color-gold);
 }
 
-.dragon-icon {
-    color: var(--color-primary);
+.nav-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    object-fit: cover;
 }
 
 .nav-menu {
