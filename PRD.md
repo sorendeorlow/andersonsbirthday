@@ -43,7 +43,7 @@ A single-page, mobile-responsive website for Anderson's 6th birthday party theme
 - Date, Time, Location cards with icons
 - Embedded Google Maps iframe
 - Theme description
-- Dress code: "Comfy clothes for outdoor games. Viking costumes welcome!"
+- Dress code: "Comfy clothes for outdoor games."
 
 ### 4. Schedule Section
 - Vertical timeline with dragon-themed icons
