@@ -122,9 +122,9 @@ img {
 }
 
 .nav-icon {
-    width: 8px;
-    height: 8px;
-    border-radius: 2px;
+    width: 24px;
+    height: 24px;
+    border-radius: 4px;
     object-fit: cover;
 }
 
