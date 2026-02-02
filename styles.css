@@ -258,6 +258,7 @@ img {
 
 @media (max-width: 768px) {
     .hero {
+        background-image: url('images/hero-mobile.jpg');
         background-size: contain;
         background-position: center top;
         background-color: #1a2a1a;
