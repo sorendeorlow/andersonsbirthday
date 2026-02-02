@@ -258,8 +258,9 @@ img {
 
 @media (max-width: 768px) {
     .hero {
-        background-size: contain;
-        background-position: center top;
+        background-image: url('images/hero-mobile.jpg');
+        background-size: cover;
+        background-position: center center;
         background-color: #1a2a1a;
     }
 }
@@ -954,6 +955,30 @@ img {
     .form-row {
         grid-template-columns: 1fr;
     }
+}
+
+/* Dragon Customization Section */
+.dragon-customization {
+    background: linear-gradient(135deg, rgba(34, 139, 34, 0.1) 0%, rgba(255, 215, 0, 0.1) 100%);
+    border: 2px dashed var(--color-primary);
+    border-radius: var(--border-radius);
+    padding: 25px;
+    margin: 30px 0;
+}
+
+.dragon-section-title {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    color: var(--color-primary);
+    margin-bottom: 8px;
+    text-align: center;
+}
+
+.dragon-section-desc {
+    text-align: center;
+    color: var(--color-brown);
+    font-size: 0.95rem;
+    margin-bottom: 20px;
 }
 
 .btn-submit {
