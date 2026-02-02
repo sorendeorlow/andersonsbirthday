@@ -246,7 +246,10 @@ img {
     align-items: center;
     text-align: center;
     position: relative;
-    background: linear-gradient(135deg, #1a1a1a 0%, #2d4a3e 50%, #1a1a1a 100%);
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)), url('images/hero-background.jpg');
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
     overflow: hidden;
 }
 
@@ -994,6 +997,20 @@ img {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px;
+}
+
+.gallery-video {
+    max-width: 800px;
+    margin: 0 auto;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: var(--shadow-lg);
+}
+
+.gallery-video video {
+    width: 100%;
+    display: block;
+    border-radius: var(--border-radius);
 }
 
 .gallery-item {
