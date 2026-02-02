@@ -249,11 +249,19 @@ img {
     align-items: center;
     text-align: center;
     position: relative;
-    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)), url('images/hero-background.jpg');
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), url('images/hero-background.jpg');
     background-size: cover;
-    background-position: center top;
+    background-position: center center;
     background-repeat: no-repeat;
     overflow: hidden;
+}
+
+@media (max-width: 768px) {
+    .hero {
+        background-size: contain;
+        background-position: center top;
+        background-color: #1a2a1a;
+    }
 }
 
 .hero::before {
