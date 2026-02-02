@@ -6,7 +6,7 @@
 // ========================================
 // Countdown Timer
 // ========================================
-const countdownDate = new Date('March 5, 2026 14:00:00 PST').getTime();
+const countdownDate = new Date('March 7, 2026 14:00:00 PST').getTime();
 
 function updateCountdown() {
     const now = new Date().getTime();
