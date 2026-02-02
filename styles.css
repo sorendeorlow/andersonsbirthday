@@ -88,7 +88,7 @@ img {
     left: 0;
     right: 0;
     z-index: 1000;
-    background: linear-gradient(180deg, rgba(26, 26, 26, 0.95) 0%, rgba(26, 26, 26, 0.9) 100%);
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.95) 0%, rgba(80, 80, 80, 0.9) 100%);
     backdrop-filter: blur(10px);
     padding: 15px 0;
     transition: var(--transition);
