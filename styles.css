@@ -819,8 +819,6 @@ img {
 }
 
 .cupcake-tower img {
-    border-radius: var(--border-radius);
-    box-shadow: var(--shadow-md);
     display: block;
 }
 
