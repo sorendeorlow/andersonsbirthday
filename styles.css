@@ -819,6 +819,7 @@ img {
 
 .cupcake-tower img {
     display: block;
+    clip-path: inset(2px);
 }
 
 .food-highlight-text h3 {
