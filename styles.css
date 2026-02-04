@@ -806,7 +806,6 @@ img {
     display: flex;
     align-items: center;
     gap: 30px;
-    background: rgba(255, 255, 255, 0.1);
     border-radius: var(--border-radius);
     padding: 30px;
     margin-bottom: 40px;
