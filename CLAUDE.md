@@ -76,4 +76,65 @@ RSVPs include fields for kids to design their own dragon:
 - Dragon's Name
 - Dragon Color (8 options: Night Black, Ocean Blue, Fireball Red, Forest Green, Royal Purple, Viking Gold, Storm Silver, Sunset Orange)
 
-This data is sent via Formspree and can be used to generate custom dragon images with AI tools like Grok.
+This data is sent via Formspree and triggers automated dragon image generation.
+
+## Dragon Gallery Automation
+
+### Architecture
+```
+RSVP Form → Formspree → Zapier → Grok API → Cloudinary → Gallery
+```
+
+### Services Required
+1. **Formspree** - Form handling (already configured)
+2. **Zapier** - Workflow automation
+3. **xAI/Grok API** - AI image generation
+4. **Cloudinary** - Image hosting and CDN
+
+### Setup Instructions
+
+#### 1. Cloudinary Setup
+1. Create account at cloudinary.com
+2. Note your Cloud Name
+3. Create `dragons` folder in Media Library
+4. Update `CLOUDINARY_CLOUD_NAME` in `script.js`
+
+#### 2. Zapier Workflow
+Create a Zap with:
+- **Trigger:** Webhook (catch hook from Formspree)
+- **Action 1:** Code - Build Grok prompt from dragon data
+- **Action 2:** Webhook - POST to xAI API for image generation
+- **Action 3:** Cloudinary - Upload generated image
+
+#### 3. Formspree Webhook
+1. Go to Formspree form settings
+2. Add webhook integration
+3. Paste Zapier webhook URL
+
+### Grok Prompt Template
+```
+Create a [COLOR] dragon in How to Train Your Dragon animation style.
+The dragon is named "[DRAGON_NAME]" and trained by [CHILD_NAME].
+Friendly expression, adventurous pose, Viking forest background.
+Digital art, vibrant colors.
+```
+
+### Color Mapping
+```javascript
+{
+  'black': 'sleek black Night Fury-style',
+  'blue': 'bright ocean blue with shimmering scales',
+  'red': 'fierce fireball red with orange highlights',
+  'green': 'deep forest green',
+  'purple': 'royal purple with mystical glow',
+  'gold': 'shimmering Viking gold',
+  'silver': 'metallic storm silver',
+  'orange': 'warm sunset orange'
+}
+```
+
+### Testing the Gallery
+1. Submit test RSVP with dragon customization
+2. Verify Zapier receives webhook
+3. Check Cloudinary for uploaded image
+4. Refresh gallery page to see dragon card

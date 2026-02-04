@@ -309,19 +309,7 @@
             <div class="food-content">
                 <div class="food-highlight fade-in">
                     <div class="cupcake-tower">
-                        <svg viewBox="0 0 100 120" width="150" height="180">
-                            <!-- Cupcake base -->
-                            <path d="M25 70 L35 100 L65 100 L75 70 Z" fill="#8B4513"/>
-                            <path d="M30 70 L38 95 L62 95 L70 70 Z" fill="#A0522D"/>
-                            <!-- Frosting -->
-                            <ellipse cx="50" cy="70" rx="30" ry="15" fill="#FFB6C1"/>
-                            <ellipse cx="50" cy="60" rx="25" ry="12" fill="#FFC0CB"/>
-                            <ellipse cx="50" cy="52" rx="18" ry="10" fill="#FFD1DC"/>
-                            <!-- Candle -->
-                            <rect x="47" y="30" width="6" height="22" fill="#FFD700"/>
-                            <ellipse cx="50" cy="28" rx="5" ry="8" fill="#FF6B35"/>
-                            <ellipse cx="50" cy="25" rx="3" ry="5" fill="#FFD700"/>
-                        </svg>
+                        <img src="images/image-7.jpg" alt="Anderson's Birthday Cupcake" width="150">
                     </div>
                     <div class="food-highlight-text">
                         <h3>Anderson's Special Cupcake</h3>
@@ -473,7 +461,13 @@
 
             <p class="gallery-intro fade-in">Get ready for an epic dragon adventure!</p>
 
-            <div class="gallery-video fade-in">
+            <!-- Custom Dragon Gallery -->
+            <div class="gallery-grid" id="dragonGallery">
+                <!-- Dragons loaded dynamically from Cloudinary -->
+            </div>
+            <p class="gallery-intro fade-in" id="dragonGalleryEmpty" style="margin-top: 20px;">Custom dragons will appear here as guests RSVP!</p>
+
+            <div class="gallery-video fade-in" style="margin-top: 40px;">
                 <video controls playsinline poster="images/hero-background.jpg">
                     <source src="images/dragon-adventure.mp4" type="video/mp4">
                     Your browser does not support the video tag.

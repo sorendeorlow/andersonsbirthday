@@ -310,3 +310,73 @@ formInputs.forEach(input => {
 console.log('%c🐉 Welcome to Berk! 🐉', 'font-size: 24px; font-weight: bold; color: #228B22;');
 console.log('%cAnderson\'s 6th Birthday Party - March 5, 2026', 'font-size: 14px; color: #8B4513;');
 console.log('%cHow to Train Your Dragon Theme', 'font-size: 12px; color: #666;');
+
+// ========================================
+// Dragon Gallery (Cloudinary Integration)
+// ========================================
+const CLOUDINARY_CLOUD_NAME = 'dgktgybir'; // Replace with your Cloudinary cloud name
+
+async function loadDragonGallery() {
+    const gallery = document.getElementById('dragonGallery');
+    const emptyMessage = document.getElementById('dragonGalleryEmpty');
+
+    if (!gallery) return;
+
+    try {
+        // Fetch dragon images from Cloudinary
+        const response = await fetch(
+            `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/list/dragons.json`
+        );
+
+        if (!response.ok) {
+            console.log('Dragon gallery: No images yet or Cloudinary not configured');
+            return;
+        }
+
+        const data = await response.json();
+
+        if (data.resources && data.resources.length > 0) {
+            // Hide empty message
+            if (emptyMessage) {
+                emptyMessage.style.display = 'none';
+            }
+
+            // Create dragon cards
+            data.resources.forEach(dragon => {
+                const card = document.createElement('div');
+                card.className = 'dragon-card fade-in';
+
+                // Extract metadata from context or filename
+                const dragonName = dragon.context?.custom?.dragon_name ||
+                                   dragon.public_id.split('/').pop().split('-')[1] ||
+                                   'Dragon';
+                const childName = dragon.context?.custom?.child_name ||
+                                  dragon.public_id.split('/').pop().split('-')[0] ||
+                                  'Viking';
+
+                card.innerHTML = `
+                    <img src="https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/c_fill,w_400,h_400/${dragon.public_id}"
+                         alt="${dragonName} - Dragon trained by ${childName}"
+                         loading="lazy">
+                    <div class="dragon-info">
+                        <h4>${dragonName}</h4>
+                        <p>Trained by ${childName}</p>
+                    </div>
+                `;
+
+                gallery.appendChild(card);
+
+                // Trigger fade-in animation
+                setTimeout(() => {
+                    card.classList.add('visible');
+                }, 100);
+            });
+        }
+    } catch (error) {
+        console.log('Dragon gallery loading:', error.message);
+        // Gallery will show placeholder message if no dragons loaded
+    }
+}
+
+// Load dragon gallery on page load
+document.addEventListener('DOMContentLoaded', loadDragonGallery);

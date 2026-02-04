@@ -163,11 +163,46 @@ Form submissions via Formspree include:
 
 ---
 
+## Dragon Gallery Automation
+
+### Architecture
+```
+RSVP Form → Formspree → Zapier → Grok API → Cloudinary → Gallery
+```
+
+### Flow
+1. Guest submits RSVP with dragon customization (childName, dragonName, dragonColor)
+2. Formspree receives form data and triggers webhook to Zapier
+3. Zapier builds a Grok prompt using the dragon data
+4. Zapier calls xAI API to generate dragon image
+5. Generated image is uploaded to Cloudinary `dragons` folder
+6. Gallery on website auto-loads images from Cloudinary
+
+### Services
+| Service | Purpose | Cost |
+|---------|---------|------|
+| Formspree | Form handling | Free tier |
+| Zapier | Workflow automation | ~$20/month |
+| xAI/Grok API | Image generation | Per-image |
+| Cloudinary | Image hosting | Free (25GB) |
+
+### Gallery Features
+- Dynamic loading from Cloudinary
+- Dragon cards with image, name, and trainer
+- Hover animation effects
+- Responsive grid layout
+- Fade-in animations
+
+---
+
 ## Future Enhancements (Optional)
 
-- [ ] AI-generated custom dragon images based on RSVP dragon customization data
+- [x] AI-generated custom dragon images based on RSVP dragon customization data
 - [ ] Post-party photo gallery population
 - [ ] Thank you page after party
+- [ ] Lightbox for full-size dragon viewing
+- [ ] Download button for parents
+- [ ] Printable dragon certificates
 
 ---
 
@@ -182,3 +217,5 @@ Form submissions via Formspree include:
 | 2026-02-01 | Updated navbar gradient to horizontal black-to-grey |
 | 2026-02-01 | Updated contact phone to 415-298-5431 |
 | 2026-02-01 | Removed gifts section |
+| 2026-02-02 | Removed costume reference from dress code |
+| 2026-02-02 | Added automated dragon gallery (Zapier + Grok + Cloudinary) |
